@@ -1,0 +1,14 @@
+.list{
+    color: white;
+    width: 300px;
+    background-color: #b630b6;
+    height: 50px;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+
+.list p{
+    padding: 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: black 4px 4px 1px;
+}

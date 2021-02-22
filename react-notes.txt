@@ -1,0 +1,119 @@
+###########
+React js
+
+# Installization:- Install node js
+	1. sudo snap install node --classic --channel=8
+	2. sudo snap refresh node --channel=12
+
+# Create react app:-
+	-> npx create-react-app <project_name>
+	e.g:- npx create-react-app Hello-world
+	->cd <project_name>
+	e.g:- cd hello-world
+	->npm start (run app on server)
+	
+# components in react:- Two types:
+	1. Stateless functional Components
+		
+		-> JavaScript function:-
+			function Welcome(props) {
+				return <h1>Hello, {props.name}<h1>;
+			}
+		
+		Note:-
+		1. Simple functions.
+		2. Use Func components as much as possible.
+		3. Absence of 'this' keyword.
+		4. Solution without using state.
+		5. Mainly responsible for the UI.
+		6. Stateless/ Dumb/ Presentational.
+	
+	2. Stateful class Components
+		-> Class extending Component class
+		-> Render method returning HTML
+		
+		class Welcome extends React.Components {
+			render() {
+				return <h1>Hello, (this.props.name)</h1>
+			}
+		}
+		
+		Notes:- 
+		1. More feature rich. 
+		2. Maintain their own private data-state.
+		3. Complex UI logic.
+		4. Provide lifecycle hooks.
+		5. Stateful/ Smart/ Container.\
+		
+# JSX:-
+	-> React.createElement('div', null)
+		NOTE:- first parameter is HTML tag.
+		       second parameter is property of html tag.			
+		       Third parameter is for childern. eg. <h1> Hello Vikram<h1>
+
+-> // React component with or without JSX
+
+	const Hello = () => {
+	    /*
+	    return (
+		<div className='dummyClass'>
+		    <h1>Hello Hello js</h1>
+		</div>
+	    )
+	    */
+	   
+	    // JSX technique
+	    return React.createElement(
+		'div', 
+		{id: 'helo', className: 'dummyClass'}, 
+		React.createElement('h1', null, 'Hello h1 tag')
+	    )
+	}
+
+	export default Hello
+
+# props:- With FUNCTION-
+	function props: 
+		// function component
+
+		//function Greet() {
+		//    return <h1>Hello Vikram</h1>
+		//}
+
+		export const Greet = props => {
+		    console.log(props)
+		    return (
+			<div>
+			    <h1>
+				Hello { props.name } a.k.a {props.heroName}
+			    </h1>
+			    {props.children}
+			</div>
+		    )    
+		}
+
+		export const Reet = () => <h1>Hello Reet</h1> 
+
+		// exporting Greet as default, this will allow us to import with any name (e.g MyComponents) 
+		//export default Greet
+	
+	:- With CLASS
+	import React, { Component } from 'react'
+
+	// class component
+	class Welcome extends Component {
+	    render() {
+		return <h1>Welcome {this.props.name} a.k.a {this.props.heroName}</h1>
+	    }
+	}
+
+	export default Welcome
+	
+# props vs state:-
+-> props get passed to the components.                     | -> State is managed within the components.
+-> Function parameter.                                     | -> Variable declared in the functionn body.
+-> props are immutable.                                    | -> state can be changed.
+-> props - Functional Components                           | -> useState Hook - Functional Components
+   this.props - Calss Components                           |    this.state - Class Components
+   
+   
