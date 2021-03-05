@@ -9,6 +9,18 @@
 
 .list p{
     padding: 2px;
+    position: relative;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-shadow: black 4px 4px 1px;
+    
+}
+
+.list p span{
+    position: absolute;
+    right: 10px;
+}
+
+.faicons{
+    margin: 0 5px;
+    font-size: 20px;
 }

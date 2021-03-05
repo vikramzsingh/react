@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.css'
 import { Greet, Reet } from './components/Greet' // we can omit .js extension
 import {Welcome} from './components/Welcome'
 import Hello from './components/Hello'
@@ -18,12 +19,16 @@ import './appStyles.css'
 import styles from './appStyles.module.css'
 import Form from './components/Form';
 import LifeCycleA from './components/LifeCycleA';
+import FragmentDemo from './components/FragmentDemo';
+import Table from './components/Table';
+import PureComp from './components/PureComp';
+import ParentComp from './components/ParentComp';
 
 class App extends Component {
     render() { 
         return ( 
             <div className = "App">
-               <Greet></Greet> 
+               {/* <Greet></Greet> 
                 <Reet> </Reet> 
                 
                 <Welcome></Welcome>
@@ -66,10 +71,13 @@ class App extends Component {
               <h1 className='error'>Error</h1>
               <h1 className={styles.success}>Success</h1>
 
-              <Form></Form>
+              <Form></Form> */}
 
-              <LifeCycleA></LifeCycleA>
-              
+              {/* <LifeCycleA></LifeCycleA> */}
+              {/* <FragmentDemo/>               */}
+              {/* <Table /> */}
+              {/* <PureComp /> */}
+              <ParentComp />
             </div>
         );
     }

@@ -3,6 +3,10 @@ import './App.css';
 import { Component } from 'react';
 import ListItems from './components/ListItems'
 import './ListItems.css'
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+
+library.add(faTrash);
 
 class App extends Component {
 
@@ -51,7 +55,7 @@ class App extends Component {
       <div className="App">
           <header>
             <form id="to-do-form" onSubmit={this.addItem}>
-              <input type="text" placeholder="Enter text" value={this.state.currentItem.text} onChange={this.handleInput} />
+              <input type="text" name="Data" placeholder="Enter text" value={this.state.currentItem.text} onChange={this.handleInput} />
               <button type="submit">Add</button>
             </form>
           </header>
